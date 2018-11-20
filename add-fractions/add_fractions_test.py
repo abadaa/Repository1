@@ -14,9 +14,12 @@ class testadd(unittest.TestCase):
     def test_add_three_plus_four(self):
         result = Fractions(3).add(Fractions(4))
         self.assertEqual(result, 7)
-    def test_add_negative_two_plus_14(self):
+    def test_add_negative_two_plus_fourteen(self):
         result = Fractions(-2).add(Fractions(14))
         self.assertEqual(result, 12)
+    def test_add_nine_plus_negative_seventeen(self):
+        result = Fractions(9).add(Fractions(-17))
+        self.assertEqual(result, -8)
         
 if __name__ == '__main__':
      unittest.main()
