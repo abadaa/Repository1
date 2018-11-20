@@ -8,6 +8,9 @@ class testadd(unittest.TestCase):
     def test_add_zero(self):
         result = Fractions(0).add(Fractions(0))
         self.assertEqual(result, 0)
+    def test_add_zero_plus_five(self):
+        result = Fractions(0).add(Fractions(5))
+        self.assertEqual(result, 5)
         
 if __name__ == '__main__':
      unittest.main()
