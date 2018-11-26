@@ -26,6 +26,9 @@ class testadd(unittest.TestCase):
     def test_add_negative_one_fifth_and_three_fifths(self):
         result = Fractions(-1, 5).add(Fractions(3, 5))
         self.assertEqual(result, Fractions(2, 5))
+    def test_add_two_sevenths_and_negative_three_sevenths(self):
+        result = Fractions(2, 7).add(Fractions(-3, 7))
+        self.assertEqual(result, Fractions(-1, 7))
         
 if __name__ == '__main__':
      unittest.main()
