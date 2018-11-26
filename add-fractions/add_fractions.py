@@ -3,4 +3,13 @@ class Fractions:
         self.num = num
         self.den = den
     def add(self, self2):
-        return self.num + self2.num
+        if(self.den!=None):
+            sum = Fractions(self.num + self2.num, self.den)
+        else:
+            sum = self.num + self2.num
+        return sum
+    def __eq__(self, other):
+        if(self.num == other.num):
+            return True
+        return False
+        

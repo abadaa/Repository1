@@ -20,6 +20,9 @@ class testadd(unittest.TestCase):
     def test_add_nine_plus_negative_seventeen(self):
         result = Fractions(9).add(Fractions(-17))
         self.assertEqual(result, -8)
+    def test_add_one_fourth_and_two_fourths(self):
+        result = Fractions(1, 4).add(Fractions(2, 4))
+        self.assertEqual(result, Fractions(3, 4))
         
 if __name__ == '__main__':
      unittest.main()
