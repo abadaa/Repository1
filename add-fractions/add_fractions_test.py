@@ -23,6 +23,9 @@ class testadd(unittest.TestCase):
     def test_add_one_fourth_and_two_fourths(self):
         result = Fractions(1, 4).add(Fractions(2, 4))
         self.assertEqual(result, Fractions(3, 4))
+    def test_add_negative_one_fifth_and_three_fifths(self):
+        result = Fractions(-1, 5).add(Fractions(3, 5))
+        self.assertEqual(result, Fractions(2, 5))
         
 if __name__ == '__main__':
      unittest.main()
