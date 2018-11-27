@@ -8,7 +8,10 @@ class Fractions:
         elif(self.den==None and other.den==None):
             sum = Fractions(self.num + other.num)
         elif(self.den != other.den):
-            sum = Fractions(self.num *other.den + other.num * self.den, self.den * other.den)
+            if(self.den%other.den == 0 and self.den/other.den > 0):
+                sum = Fractions(self.num + (other.num * (self.den/other.den)), self.den)
+            else:
+                sum = Fractions(self.num *other.den + other.num * self.den, self.den * other.den)
         else:
             sum = Fractions(self.num + other.num, self.den)
         return sum

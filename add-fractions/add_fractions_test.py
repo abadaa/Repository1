@@ -38,6 +38,9 @@ class testadd(unittest.TestCase):
     def test_add_one_third_and_one_half(self):
         result = Fractions(1, 3).add(Fractions(1, 2))
         self.assertEqual(result, Fractions(5, 6))
+    def test_add_one_eighth_and_one_fourth(self):
+        result = Fractions(1, 8).add(Fractions(1, 4))
+        self.assertEqual(result, Fractions(3, 8))
 
 if __name__ == '__main__':
      unittest.main()
