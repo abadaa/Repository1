@@ -3,13 +3,13 @@ class Fractions:
         self.num = num
         self.den = den
     def add(self, self2):
-        if(self.den!=None):
-            sum = Fractions(self.num + self2.num, self.den)
-        else:
+        if(self.den==None and self2.den==None):
             sum = self.num + self2.num
+        else:
+            sum = Fractions(self.num + self2.num, self.den)
         return sum
     def __eq__(self, other):
-        if(self.num == other.num):
-            return True
-        return False
+        if(type(self) == type(other)):
+            return self.num == other.num and self.den == other.den
+        return TypeError
         
