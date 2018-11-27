@@ -35,6 +35,8 @@ class testadd(unittest.TestCase):
     def test_undefined(self):
         result = Fractions(5, 0).add(Fractions(3, 2))
         self.assertEqual(result, ValueError)
-        
+    def test_add_one_third_and_one_half(self):
+        result = Fractions(1, 3).add(Fractions(1, 2))
+        self.assertEqual(result, Fractions(5, 6))
 if __name__ == '__main__':
      unittest.main()
