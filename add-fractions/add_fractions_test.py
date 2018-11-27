@@ -32,6 +32,9 @@ class testadd(unittest.TestCase):
     def test_add_seven_eighths_and_two_eigths(self):
         result = Fractions(7, 8).add(Fractions(2, 8))
         self.assertEqual(result, Fractions(9, 8))
+    def test_undefined(self):
+        result = Fractions(5, 0).add(Fractions(3, 2))
+        self.assertEqual(result, ValueError)
         
 if __name__ == '__main__':
      unittest.main()

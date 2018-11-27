@@ -3,7 +3,9 @@ class Fractions:
         self.num = num
         self.den = den
     def add(self, self2):
-        if(self.den==None and self2.den==None):
+        if(self.den == 0 or self2.den == 0):
+            return ValueError
+        elif(self.den==None and self2.den==None):
             sum = self.num + self2.num
         else:
             sum = Fractions(self.num + self2.num, self.den)
