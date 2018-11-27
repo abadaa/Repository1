@@ -7,11 +7,17 @@ class Fractions:
             return ValueError
         elif(self.den==None and other.den==None):
             sum = Fractions(self.num + other.num)
-        elif(self.den != other.den):
+        elif(self.den != other.den and self.den > other.den):
             if(self.den%other.den == 0 and self.den/other.den > 0):
                 sum = Fractions(self.num + (other.num * (self.den/other.den)), self.den)
             else:
                 sum = Fractions(self.num *other.den + other.num * self.den, self.den * other.den)
+        elif(self.den != other.den and other.den > self.den):
+            if(other.den%self.den == 0 and other.den/self.den > 0):
+                print self.num*(other.den/self.den)
+                sum = Fractions(other.num + (self.num * (other.den/self.den)), other.den)
+            else:
+                sum = Fractions(self.num *other.den + other.num * self.den, self.den * other.den)        
         else:
             sum = Fractions(self.num + other.num, self.den)
         return sum
