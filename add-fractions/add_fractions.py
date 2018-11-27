@@ -6,7 +6,7 @@ class Fractions:
         if(self.den == 0 or other.den == 0):
             return ValueError
         elif(self.den==None and other.den==None):
-            sum = self.num + other.num
+            sum = Fractions(self.num + other.num)
         elif(self.den != other.den):
             sum = Fractions(self.num *other.den + other.num * self.den, self.den * other.den)
         else:
