@@ -1,5 +1,5 @@
 import unittest
-from add_fractions import Fractions
+from add_fractions import Fractions, Divisors
 
 class testadd(unittest.TestCase):
     def setup(self):
@@ -44,5 +44,10 @@ class testadd(unittest.TestCase):
     def test_add_one_third_and_one_sixth(self):
         result = Fractions(1, 3).add(Fractions(1, 6))
         self.assertEqual(result, Fractions(3, 6))
+    def test_gdc_with_integers(self):
+        self.assertEqual(1, Divisors().gcd(1, 1))
+    def test_gcd_with_relative_primes(self):
+        self.assertEqual(1, Divisors().gcd(8, 67))
+        
 if __name__ == '__main__':
      unittest.main()
