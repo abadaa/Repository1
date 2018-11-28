@@ -1,7 +1,9 @@
 class Fractions:
-    def __init__(self, num, den=None):
-        self.num = num
-        self.den = den
+    def __init__(self, num, den=1):
+        gcd = Divisors().gcd(num, den)
+        print(gcd)
+        self.num = num / gcd
+        self.den = den / gcd
         
     def add(self, other):
         if(self.den == 0 or other.den == 0):
@@ -32,10 +34,12 @@ class Divisors:
         pass
     
     def gcd(self, a, b):
+        x= 0
+        if(isinstance(a, int)):
+            print "yes"
         while(b != 0):
             x = b
             b = a%x
             a = x
-        print(a)
         return a
         

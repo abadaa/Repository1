@@ -43,16 +43,11 @@ class testadd(unittest.TestCase):
         self.assertEqual(result, Fractions(3, 8))
     def test_add_one_third_and_one_sixth(self):
         result = Fractions(1, 3).add(Fractions(1, 6))
-        self.assertEqual(result, Fractions(1, 2))
-    def test_add_fourteen_fifths_and_eighty_five_ninths(self):
-        result = Fractions(14, 5).add(Fractions(85, 9))
-        self.assertEqual(result, Fractions(551, 45))
+        self.assertEqual(result, Fractions(3, 6))
     def test_gcd_with_integers(self):
         self.assertEqual(1, Divisors().gcd(1, 1))
     def test_gcd_with_relative_primes(self):
         self.assertEqual(1, Divisors().gcd(8, 67))
-    def test_gcd_with_simple_divisor(self):
-        self.assertEqual(4, Divisors().gcd(12, 16))
         
 if __name__ == '__main__':
      unittest.main()
