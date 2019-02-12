@@ -1,0 +1,13 @@
+{
+  "name": "hello-ts-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "Aziz Abada",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^11.9.0"
+  }
+}
